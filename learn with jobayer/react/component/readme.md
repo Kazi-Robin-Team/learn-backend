@@ -13,7 +13,7 @@ export default Hello;
 - return → Returns JSX (UI)
 - export default → Allows using this component in other files
 
-### 2️⃣ Use the Component in App
+## 2️⃣ Use the Component in App
 ```
 import Hello from "./Hello";
 
