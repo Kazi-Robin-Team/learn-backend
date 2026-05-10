@@ -1,35 +1,47 @@
-class Person {
-  #name    //abstraction
-  constructor(name, age) {
-    this.#name = name;
+// object oriented program
+/*
+4 pillar of oop
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+*/
+ 
+// const objForParson1 = {
+// name:"robin",
+// age:20,
+// married:true,
+// greeting:function(){
+//   console.log("hello i am " + this.name)
+// }
+// }
+// const objForParson2 = {
+// name:"saiful",
+// age:20,
+// married:true,
+// greeting:function(){
+//   console.log("hello i am " + this.name)
+// }
+// }
+
+// console.log(objForParson.name)
+// console.log(objForParson.age)
+// console.log(objForParson.married)
+// objForParson.greeting()
+
+class Parson {
+  constructor(name,age,married){
+    this.name = name;
     this.age = age;
+    this.married = married;
   }
-
-  calling(names,a,b){
-      this.result = a+b //encapsulation
-    return "I am " + names + " "+ this.result
+  greeting(){
+    console.log("Hi i am " + this.name)
   }
-}
+ }
 
-const user1 = new Person("robin",22)
-
-class Animal extends Person{  //inheritance
-  constructor(name, age,color){
-    super(name, age)
-    this.color = color
-  }
-  sound(){
-     return console.log(this.color + " color "+ this.age + " meow")
-  }
-  calling(name){  //polymorphism.
-    
-     return "I am is " + name + " "
-  }
-}
-
-const animal1 = new Animal("cute",2,"white")
-// animal1.sound()
-console.log(animal1.calling("cute"))
-
-
-// console.log(user1.calling("robin",4,5))
+const user1 = new Parson("robin",20,true)
+const user2 = new Parson("saiful",20,true)
+user2.greeting()
+console.log(Object.getOwnPropertyNames(document));
